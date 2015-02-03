@@ -1,5 +1,8 @@
 # sshguard-contrib
+
 Additional sshguard tools to manage the blacklists.
+
+[![Build Status](https://travis-ci.org/shadowbq/sshguard-contrib.svg?branch=master)](https://travis-ci.org/shadowbq/sshguard-contrib)
 
 The SSHGuard project is located at [http://www.sshguard.net/]
 
