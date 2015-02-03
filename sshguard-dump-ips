@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+sshguard-dump /var/log/sshguard.db |awk -F ',' '{print $2}' |sort |grep -v 'ip' |grep -v '^$'

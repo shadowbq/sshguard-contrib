@@ -1,0 +1,6 @@
+build/
+Makefile
+sshguard-prefix/
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake

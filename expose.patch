@@ -1,0 +1,31 @@
+--- a/src/sshguard_blacklist.h	2012-04-27 15:40:11.000000000 -0500
++++ b/src/sshguard_blacklist.h	2012-04-27 15:55:37.000000000 -0500
+@@ -25,6 +25,8 @@
+ 
+ #include "sshguard_attack.h"
+ 
++void *attacker_serializer(const void *restrict el, uint32_t *restrict len);
++
+ /**
+  * Load the blacklist contained at a given filename.
+  *
+--- a/src/sshguard_blacklist.c	2012-04-27 15:35:22.000000000 -0500
++++ b/src/sshguard_blacklist.c	2012-04-27 15:55:48.000000000 -0500
+@@ -29,7 +29,7 @@
+ #include <assert.h>
+ 
+ #include "sshguard_addresskind.h"
+-#include "sshguard_log.h"
++#define sshguard_log(...)
+ #include "sshguard_blacklist.h"
+ 
+ #define BL_MAXBUF      50
+@@ -59,7 +59,7 @@
+ }
+ */
+ 
+-static void *attacker_serializer(const void *restrict el, uint32_t *restrict len) {
++void *attacker_serializer(const void *restrict el, uint32_t *restrict len) {
+     /* buffer for serialization operations */
+     char *serialization_buf;
+     attacker_t atkr = *(const attacker_t *restrict)el;
