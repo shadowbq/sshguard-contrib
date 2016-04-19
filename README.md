@@ -2,6 +2,8 @@
 
 Additional sshguard tools to manage the blacklists.
 
+On SSHGUARD 1.6.x: sshguard has changed the data structure of the blacklist. This tool only supports upto 1.5.x today.
+
 [![Build Status](https://travis-ci.org/shadowbq/sshguard-contrib.svg?branch=master)](https://travis-ci.org/shadowbq/sshguard-contrib)
 
 The SSHGuard project is located at [http://www.sshguard.net/]
